@@ -117,3 +117,7 @@ void SerialEventRun() {
 ```
 
 [People say using `serialEvent()` is the "wrong" thing to do](https://forum.arduino.cc/t/serialevent-with-the-esplora-leo-micro/173720), but it's what I've always done because I didn't know better at the time, and it works fine for what I usually do.
+
+## "y no analog?"
+
+The PMOD headers on FPGA boards, at least the ones I've used, are digital. Some boards have a PMOD header for XADC, but I've never used them and in fact have no idea how they work (as of writing this). As such, I've completely removed anything to do with analog inputs, though some of the pins are capable of analog and in fact are used as analog I/O on the Leonardo and Pro Micro. 
