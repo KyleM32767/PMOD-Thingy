@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CONSMA001_C_G")(type "KiCad")(uri "${KIPRJMOD}/CONSMA001_C_G")(options "")(descr ""))
+)

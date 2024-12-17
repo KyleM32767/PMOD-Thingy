@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CONSMA001-C-G")(type "KiCad")(uri "${KIPRJMOD}/CONSMA001_C_G/CONSMA001-C-G.kicad_sym")(options "")(descr ""))
+)
