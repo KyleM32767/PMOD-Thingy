@@ -83,7 +83,7 @@ The PMOD Thingy runs the same bootloader as the Sparkfun Pro Micro 3.3V / 8MHz, 
 
 ![](img/burn_bootloader_setting.png)
 
-## How to Set up
+## Adding board to Arduino IDE
 
 While you techincally *can* program the PMOD Thingy as a Sparkfun Pro Micro, it has an entirely different pinout from any standard Arduino. As such it needs its own special board definition. Use the following steps to add it...
 
@@ -116,4 +116,4 @@ void SerialEventRun() {
 }
 ```
 
-[People say using `serialEvent()` it's the "wrong" thing to do](https://forum.arduino.cc/t/serialevent-with-the-esplora-leo-micro/173720), but it's what I've always done because I didn't know better at the time, and it works fine for what I usually do.
+[People say using `serialEvent()` is the "wrong" thing to do](https://forum.arduino.cc/t/serialevent-with-the-esplora-leo-micro/173720), but it's what I've always done because I didn't know better at the time, and it works fine for what I usually do.
