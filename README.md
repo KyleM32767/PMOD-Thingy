@@ -51,16 +51,16 @@ else
 	Serial.println("0 on JB2");
 ```
 
-Each PMOD header is also connected to a single port on the Atmega32U4, which means you can also read and write them bytewise using the data direction and port registers if that is more your speed. There are the macros `PORT_JA`, `DDR_JA`, `PORT_JB`, and `DDR_JB` for that purpose. This makes reading and writing multiple bits much, much faster The code snippet below does the same as the one above...
+Each PMOD header is also connected to a single port on the Atmega32U4, which means you can also read and write them bytewise using the data direction and port registers if that is more your speed. There are the macros `DDR_JA`/`DDR_JB` (data direction), `PIN_JA`/`PIN_JB` (input), and `PORT_JA`/`PORT_JB` (output) for that purpose. For more information, refer to [section 10.4 of the ATmega32U4 datasheet](https://ww1.microchip.com/downloads/en/devicedoc/atmel-7766-8-bit-avr-atmega16u4-32u4_datasheet.pdf#page=84). This makes reading and writing multiple bits much, much faster. The code snippet below is functionally identical to the one above...
 
 ```cpp
 // output 0 on JA6
 DDR_JA |= (1<<6);
 PORT_JA &= ~(1<<6);
 
-// input on JB2
+// read input on JB2
 DDR_JB %= ~(1<<2);
-if (PORT_JB & (1<<2))
+if (PIN_JB & (1<<2))
 	Serial.println("1 on JB2");
 ```
 

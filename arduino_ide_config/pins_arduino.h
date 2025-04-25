@@ -103,8 +103,10 @@
 // port and data direction registers for byte-wise writing PMOD headers
 #define DDR_JA  DDRB
 #define PORT_JA PORTB
+#define PIN_JA  PINB
 #define DDR_JB  DDRD
 #define PORT_JB PORTD
+#define PIN_JB  PIND
 
 // macros for each pin
 #define JA0 0
